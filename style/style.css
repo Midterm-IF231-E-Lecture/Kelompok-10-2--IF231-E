@@ -1,0 +1,315 @@
+
+body {
+  background-image: url("../img/background/background-pagi.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+body img
+{
+  object-fit: cover;
+}
+
+/*
+.background {
+  overflow: hidden;
+  margin: auto;
+}
+*/
+
+header {
+  top: 0;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background: linear-gradient(90deg, #060606 0%, #202020 94.79%);
+  color: #fff;
+  font-size: 20px;
+  font-family: calibri;
+  z-index: 100;
+}
+
+header .icon img {
+  height: 50px;
+}
+
+header 
+{
+  padding-bottom: 10px;
+}
+
+section {
+  max-width: 650px;
+  margin: auto;
+  margin-top: 90px;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+section .section-started .title {
+  /* -webkit-text-stroke: 1px white; */
+}
+
+#section-started.container-fluid.section-started
+{
+  margin: auto;
+  width: 400px;
+  background-color: rgb(173, 216, 230, 0.3);
+  position: relative;
+}
+
+.fs-2.my-2.title
+{
+  padding-top: 10px;
+}
+
+.avatar-select {
+  margin: auto;
+  max-width: 400px;
+}
+
+.avatar-select .avatar {
+  transition: all 1 ease;
+}
+
+.avatar-select .nav-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.avatar-select .nav-icon i {
+  -webkit-text-stroke: 4px white;
+  font-size: 70px;
+  cursor: pointer;
+}
+
+.avatar-select .nav-left {
+  left: 0;
+}
+.avatar-select .nav-right {
+  right: 0;
+}
+
+.input-name {
+  max-width: 210px;
+  border: 2px solid #212529;
+  padding: 6px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.avatar-activity.position-relative
+{
+  margin: auto;
+  padding: 10px;
+  width: 400px;
+  height: auto;
+  background-color: rgb(240, 255, 255, 0.5);
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.box-progress {
+  margin: 110px auto auto auto;
+  padding: 8px;
+  width: 400px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+#greeting.my-1
+{
+  color: black;
+  background-color: rgb(173, 216, 230, 0.5);
+  border-radius: 10px;
+  margin: auto;
+  width: 400px;
+}
+
+#time.my-1.fs-4.fw-bold
+{
+  color: black;
+  background-color: rgb(173, 216, 230, 0.5);
+  border-radius: 10px;
+  margin: auto;
+  width: 400px;
+}
+
+.wrap-item-progress {
+  display: inline-block;
+  width: 80%;
+}
+
+.action {
+  width: 260px;
+  margin: auto;
+}
+
+.action a {
+  width: 100px;
+  margin: 10px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  background: linear-gradient(90deg, #060606 0%, #202020 94.79%);
+  z-index: 100;
+}
+
+@media (max-width: 320px) {
+  .input-name {
+    width: 150px;
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+/* minigame */
+
+:root {
+  box-sizing: border-box;
+}
+
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+#bungkus {
+  height: 100vh;
+  background: linear-gradient(to right, #77A9B0, #9FC0C4, #E4E6E5);
+}
+
+.kepala {
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(90deg, #060606 0%, #202020 94.79%);
+  color: white;
+  font-size: 20px;
+  font-family: calibri;
+  z-index: 100;
+  text-align: center;
+}
+
+.kepala img
+{
+  padding: 10px;
+  position: fixed;
+  margin: auto;
+  width: 50px;
+  align-self: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+
+.kata {
+  font-weight: bold;
+  color: #FEC8D8;
+  padding-top: 10px;
+  padding-left: 25px;
+  font-family: 'Palette Mosaic', cursive
+}
+
+.kaki {
+  width: 100%;
+  height: 150px;
+  background-color: #957DAD;
+}
+
+.kataku {
+  font-weight: bold;
+  color: #FEC8D8;
+  margin-top: 10px;
+  padding-top: 25px;
+  padding-left: 25px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Palette Mosaic', cursive
+}
+
+.mula {
+  background: linear-gradient(#D291BC, #957DAD, #E0BBE4, #FEC8D8);
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  font-family: 'Palette Mosaic', cursive
+}
+
+.mula::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  padding: 10px;
+  background: linear-gradient(90deg, #957DAD, #FEC8D8);
+  -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.option {
+  width: 30%;
+  margin: 10px 15px;
+  padding: 25px;
+  text-align: center;
+  font-size: 40px;
+  background-color: #FEC8D8;
+}
+
+.option:hover {
+  cursor: pointer;
+  background-color: plum;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1)ease-in-out;
+  transform: scale(4deg);
+  -webkit-transform: scale(110%);
+  -moz-transform: scale(110%);
+  -ms-transform: scale(110%);
+  -o-transform: scale(110%);
+  -webkit-transition: cubic-bezier(0.215, 0.610, 0.355, 1)ease-in-out;
+  -moz-transition: cubic-bezier(0.215, 0.610, 0.355, 1)ease-in-out;
+  -moz-transition: cubic-bezier(0.215, 0.610, 0.355, 1)ease-in-out;
+  -o-transition: cubic-bezier(0.215, 0.610, 0.355, 1)ease-in-out;
+
+}
