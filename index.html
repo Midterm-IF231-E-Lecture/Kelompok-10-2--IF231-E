@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMNLife: Kelompok 10</title>
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="style/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <div class="icon py-2 px-4 text-center">
+            <img src="img/piala.png" class="img-fluid"><br>
+            Mid Exam
+        </div>
+    </header>
+
+    <section>
+        <div class="container-fluid section-started" id="section-started">
+            <h1 class="fs-2 my-2 title">Pilih Avatar</h1>
+            <div class="avatar-select position-relative">
+                <div class="nav-icon nav-left" id="nav-left">
+                    <i class="fa-solid fa-caret-left"></i>
+                </div>
+                <div class="avatar">
+                    <img id="img-avatar" style="max-height:300px" class="img-fluid" src="img/avatar/avatar_main1.gif">
+                </div>
+                <div class="nav-icon nav-right" id="nav-right">
+                    <i class="fa-solid fa-caret-right"></i>
+                </div>
+            </div>
+            <input id="input-name" type="text" class="input-name form-control-sm d-block m-auto my-3" placeholder="Masukkan Nama">
+            <a id="btn-play" class="btn btn-warning btn-play my-2 fw-bold">PLAY <i class="fa-solid fa-play"></i></a>
+        </div>
+
+        <div class="container-fluid section-play" id="section-play">
+            <div class="box-progress">
+                <div class="row">
+                    <div class="col-md-6 my-2">
+                        <i style="width: 15%;" class="fa-solid fa-utensils fs-5"></i>
+                        <div class="wrap-item-progress">
+                            <div class="progress">
+                                <div id="progres-food" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-2">
+                        <i style="width: 15%;" class="fa-solid fa-bed fs-5"></i>
+                        <div class="wrap-item-progress">
+                            <div class="progress">
+                                <div id="progres-sleep" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar"  aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-2">
+                        <i style="width: 15%;" class="fa-solid fa-gamepad fs-5"></i>
+                        <div class="wrap-item-progress">
+                            <div class="progress">
+                                <div id="progres-game" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar"  aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-2">
+                        <i style="width: 15%;" class="fa-solid fa-book fs-5"></i>
+                        <div class="wrap-item-progress">
+                            <div class="progress">
+                                <div id="progres-book" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar"  aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="fs-4">Semester <span id="semester">1</span></h3>
+            </div>
+            <div id="greeting" style="font-weight:bold;font-size: 25px;" class="my-1">Good <span id="text-greeting"></span> <span id="name-local">Name</span></div>
+            <div id="time" class="my-1 fs-4 fw-bold" style="font-weight:bold;font-size: 25px;"></div>
+            <div class="avatar-activity position-relative">
+                <div class="avatar">
+                    <img id="img-avatar-play" style="max-height:150px" class="img-fluid" src="img/avatar/avatar_main1.png">
+                </div>
+            </div>
+            <div class="action text-center">
+                <a id="btn-makan" class="btn btn-warning btn-play my-2 fw-bold" style="font-weight:bold">Makan</a>
+                <a id="btn-tidur" class="btn btn-warning btn-play my-2 fw-bold" style="font-weight:bold">Tidur</a>
+                <a id="btn-main" class="btn btn-warning btn-play my-2 fw-bold" style="font-weight:bold">Main</a>
+                <a id="btn-belajar" class="btn btn-warning btn-play my-2 fw-bold" style="font-weight:bold">Belajar</a>
+            </div>
+
+            <div id="btn-reset" class="reset my-2 fs-3 btn btn-danger btn-play my-2 fw-bold" style="font-weight:bold">
+               New Game <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="warning-limit position-absolute" style="max-width:500px;top:100px;left:0;right:0;margin-left:auto;margin-right: auto;">
+        
+    </div>
+    
+
+    <footer>
+
+    </footer>
+
+    <script src="script/jquery.js"></script>
+    <script src="script/boostrap.js"></script>
+    <script src="script/sweetalert.js"></script>
+    <script src="script/script2.js"></script>
+    
+</body>
+</html>

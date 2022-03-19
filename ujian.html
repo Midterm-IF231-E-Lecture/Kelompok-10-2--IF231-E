@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css"/>
+
+    <title>UMNLife: Ujian</title>
+    
+</head>
+<body>
+
+    <div class="bungkus">
+        <div class="kepala">
+            <img src="img/piala.png" class="img-fluid"><br>
+        </div>
+        <div class="mula">
+            <p>
+                Anda harus mengalahkan bot dalam permainan suit untuk<br>mendapat jawaban ujian.
+                Ini satu-satunya cara Anda untuk melewatkan semester ini. 
+                <br>
+            </p>
+            <h1 class="awal">Let's Play</h1>
+            <br />
+            <h1 id="gimii"></h1>
+            <br />
+            <h3 id="result"></h3>
+        </div>
+        <div class="game">
+            <div class="option" onclick="pickoption('✌')">✌</div>
+            <div class="option" onclick="pickoption('🖐')">🖐</div>
+            <div class="option" onclick="pickoption('✊')">✊</div>
+        </div>
+        <div class="kaki">
+            <h1 class="kataku">Waktunya ujian!</h1>
+        </div>
+        </div>
+        
+    </div>
+
+    <script>
+        class Start{
+            constructor(){
+                this.PlayerName ="Anda"
+                this.botName = "bot"
+                this.playeroption;
+                this.botOption;
+                this.winner = ""
+            }
+
+            get getplayeroption () {
+                return this.playeroption
+            }
+
+            set setplayeroption (choice){
+                this.playeroption = choice;
+            }
+
+            get getbotOption () {
+                return this.botOption;
+            }
+
+            set setbotOption (choice) {
+                this.botOption = choice;
+            }
+
+            butThinker() {
+                const choice = ["✌","🖐","✊"];
+                const bot = choice[Math.floor(Math.random() * choice.length)];
+                return bot;
+            }
+
+            winset() {
+                if(this.botOption == "✌" && this.playeroption =="🖐"){
+                    return this.winner = this.botName;
+                }else if(this.botOption == "✌" && this.playeroption == "✊"){
+                    this.winner = this.PlayerName;
+                    if (confirm("Anda telah menemukan jawaban ujian! Klik OK untuk lakukan ujian dan lanjut ke semester berikutnya."))
+                    {
+                        window.location.href = "index.html";
+                    }
+                }else if(this.botOption == "🖐" && this.playeroption =="✊"){
+                    return this.winner = this.botName;
+                }else if(this.botOption == "🖐" && this.playeroption == "✌"){
+                    this.winner = this.PlayerName;
+                    if (confirm("Anda telah menemukan jawaban ujian! Klik OK untuk lakukan ujian dan lanjut ke semester berikutnya."))
+                    {
+                        window.location.href = "index.html";
+                    }
+                }else if(this.botOption == "✊" && this.playeroption =="✌"){
+                    return this.winner = this.botName;
+                }else if(this.botOption == "✊" && this.playeroption == "🖐"){
+                    this.winner = this.PlayerName;
+                    if (confirm("Anda telah menemukan jawaban ujian! Klik OK untuk lakukan ujian dan lanjut ke semester berikutnya."))
+                    {
+                        window.location.href = "index.html";
+                    }
+                }else {
+                    return this.winner = "sama"
+                }
+            }
+
+            Raealwin() {
+                if (this.winner != "sama") {
+                    return `Uhuy, ${this.winner} menang dong`;
+                } else {
+                    return `Ahay, ${this.winner}. Kagak ada yang menang`;
+                }
+            }
+        }
+
+        function pickoption(option) {
+            const start = new Start();
+            start.setplayeroption = option;
+            start.setbotOption = start.butThinker();
+            start.winset();
+            console.log(`player: ${start.getplayeroption} vs bot: ${start.getbotOption} `);
+            console.log("hasil akhir: ",start.Raealwin())
+
+            const gimii = document.getElementById("gimii");
+            const result = document.getElementById("result");
+
+            gimii.textContent =  "---"
+            result.textContent =  "---"
+
+            setTimeout(() => {
+                gimii.textContent = `${start.getplayeroption} vs ${start.getbotOption}`
+                result.textContent = start.Raealwin();
+            }, 1500);
+        }
+    </script>
+    
+</body>
+</html>
